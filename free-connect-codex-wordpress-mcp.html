@@ -324,7 +324,7 @@
       "name": "Is Codex free to use with WordPress?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Codex has a free tier with usage limits, and paid plans start at $8/month. The WSP WordPress MCP plugin and MCP Adapter are both 100% free and open source."
+        "text": "Codex has a free tier with usage limits, and paid plans start at $8/month. The WSP MCP – AI Agents Connector plugin (with the MCP Adapter bundled in) is 100% free and open source."
       }
     },
     {
@@ -340,7 +340,7 @@
       "name": "Do I need coding skills to connect Codex with WordPress?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No coding skills required. Install two plugins, paste a config snippet into a TOML file, and generate an application password — about 5–10 minutes total."
+        "text": "No coding skills required. Install one plugin and paste a ready-made config snippet into Codex's TOML file — about 5 minutes total, with no credentials to set up by hand."
       }
     },
     {
@@ -356,7 +356,7 @@
       "name": "Is it safe to connect Codex to my WordPress site?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The WSP WordPress MCP plugin gives you granular ability controls — toggle off anything you don't want Codex to access. Keep your application password private and revoke it from WordPress at any time."
+        "text": "Yes. The WSP WordPress MCP plugin gives you granular ability controls — toggle off anything you don't want Codex to access. Keep your connection config private and disable abilities you don't need."
       }
     },
     {
@@ -460,54 +460,40 @@
         <div class="step">
           <div class="step-num">01</div>
           <div class="step-body">
-            <h3>Download the MCP Adapter Plugin</h3>
-            <p>The MCP Adapter bridges your WordPress REST API with Codex's MCP protocol. Go to the MCP Adapter GitHub repository, click <strong>Releases</strong>, and download the latest <code>.zip</code> file.</p>
+            <h3>Download the WSP MCP Plugin</h3>
+            <p>You now only need a <strong>single plugin</strong>. Go to the <a href="https://github.com/bilalnaseer/wsp-wordpress-mcp">WSP WordPress MCP GitHub repository</a>, click <strong>Releases</strong>, and download <code>wsp-mcp-ai-agents-connector.zip</code> from the latest release (v2.3.0 at recording). The MCP Adapter is bundled inside, so there's no separate adapter plugin to install anymore. It's free and MIT licensed — no account needed.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">02</div>
           <div class="step-body">
-            <h3>Download the WSP WordPress MCP Plugin</h3>
-            <p>This free, open-source plugin by WebSensePro exposes your WordPress abilities to Codex. Download the latest release from the <a href="https://github.com/bilalnaseer/wsp-wordpress-mcp">WSP WordPress MCP GitHub repository</a>. MIT licensed, no account needed.</p>
+            <h3>Install and Activate the Plugin in WordPress</h3>
+            <p>In your WordPress dashboard, go to <strong>Plugins → Add Plugin → Upload Plugin</strong>. Upload the ZIP and click <strong>Activate Plugin</strong>. After activation, a new "MCP" menu item appears in your sidebar.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">03</div>
-          <div class="step-body">
-            <h3>Install and Activate Both Plugins in WordPress</h3>
-            <p>In your WordPress dashboard, go to <strong>Plugins → Add Plugin → Upload Plugin</strong>. Upload and activate the MCP Adapter first, then the WSP WordPress MCP plugin. After activation, a new "MCP" menu item appears in your sidebar.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">04</div>
           <div class="step-body">
             <h3>Configure Which Abilities Codex Can Access</h3>
             <p>Click <strong>MCP → Settings</strong>. Toggle on the abilities you want Codex to use: create posts, read posts, delete posts, manage pages, WooCommerce products, taxonomy, comments, media, users, and site settings. Toggle off anything you want to restrict.</p>
           </div>
         </div>
         <div class="step">
-          <div class="step-num">05</div>
+          <div class="step-num">04</div>
           <div class="step-body">
             <h3>Copy the Codex Config Snippet</h3>
-            <p>Go to <strong>MCP → Config Files</strong> and click "Copy to Clipboard" under the Codex section. This TOML-formatted snippet contains your WordPress URL and MCP endpoint — it's what tells Codex where your site lives.</p>
+            <p>Go to <strong>MCP → Config Files</strong> and click "Copy to Clipboard" under the Codex section. This TOML-formatted snippet already includes your WordPress URL, MCP endpoint, and connection credentials — with nothing to replace by hand.</p>
           </div>
         </div>
         <div class="step">
-          <div class="step-num">06</div>
-          <div class="step-body">
-            <h3>Generate a WordPress Application Password</h3>
-            <p>Go to <strong>Users → All Users → Edit</strong> your admin user. Scroll to <strong>Application Passwords</strong>, create a new one (name it "Codex"), copy it, and replace the <code>replace with your application password</code> placeholder in the config snippet. Treat this like a password — do not share it.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">07</div>
+          <div class="step-num">05</div>
           <div class="step-body">
             <h3>Paste the Config into Codex's config.toml and Restart</h3>
             <p>Open Codex → <strong>Settings → Configuration → Open config.toml</strong>. Scroll to the bottom of the file and paste the snippet you copied from the plugin. Save the file, then fully close and reopen Codex. Go back to Settings — under <strong>MCP Server</strong> you should now see the WordPress MCP server listed alongside your existing servers.</p>
           </div>
         </div>
         <div class="step">
-          <div class="step-num">08</div>
+          <div class="step-num">06</div>
           <div class="step-body">
             <h3>Test It — Ask Codex to Create a Blog Post</h3>
             <p>Open a new Codex chat and type: <em>"Please create a new blog post in my WordPress website about how to rank in Bing in 2026."</em> Codex will ask for permission to access WordPress — click <strong>Allow</strong>. The free tier may take a minute or two, but you'll get a fully formatted, SEO-friendly blog post posted directly to your WordPress site.</p>
@@ -521,7 +507,7 @@
       <div class="faq-list">
         <div class="faq-item">
           <h3>Is Codex free to use with WordPress?</h3>
-          <p>Codex has a free tier with usage limits, and paid plans start at $8/month — significantly cheaper than Claude AI's $20/month starting plan. The WSP WordPress MCP plugin and MCP Adapter are both 100% free and open source.</p>
+          <p>Codex has a free tier with usage limits, and paid plans start at $8/month — significantly cheaper than Claude AI's $20/month starting plan. The WSP MCP – AI Agents Connector plugin (which bundles the MCP Adapter) is 100% free and open source.</p>
         </div>
         <div class="faq-item">
           <h3>What is Codex and how is it different from Claude AI?</h3>
@@ -529,7 +515,7 @@
         </div>
         <div class="faq-item">
           <h3>Do I need coding skills to connect Codex with WordPress?</h3>
-          <p>No coding skills required. You install two plugins, copy a config snippet into a TOML file, and generate an application password — the whole process takes about 5–10 minutes.</p>
+          <p>No coding skills required. You install one plugin and paste a ready-made config snippet into Codex's TOML file — the whole process takes about 5 minutes, with no credentials to set up by hand.</p>
         </div>
         <div class="faq-item">
           <h3>What can Codex do with my WordPress website?</h3>
@@ -537,7 +523,7 @@
         </div>
         <div class="faq-item">
           <h3>Is it safe to connect Codex to my WordPress site?</h3>
-          <p>Yes, with appropriate precautions. The WSP WordPress MCP plugin gives you granular control — toggle off any ability you don't want Codex to use. Keep your application password private, and revoke it from WordPress at any time if needed.</p>
+          <p>Yes, with appropriate precautions. The WSP WordPress MCP plugin gives you granular control — toggle off any ability you don't want Codex to use. Keep your connection config private, and disable abilities you don't need.</p>
         </div>
         <div class="faq-item">
           <h3>What is MCP (Model Context Protocol)?</h3>

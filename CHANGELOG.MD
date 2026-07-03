@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Changed
+- Updated all four tutorial pages (Claude AI, Codex, Antigravity 2.0, Cursor AI) to reflect the new **single-plugin** setup: one `wsp-mcp-ai-agents-connector.zip` download (WSP MCP – AI Agents Connector, v2.3.0) with the MCP Adapter now bundled in, replacing the old two-plugin flow.
+- Removed the manual "Generate a WordPress Application Password" step from all tutorials — the copied config snippet now includes the connection credentials. Renumbered the remaining setup steps accordingly.
+- Updated visible FAQs and JSON-LD `FAQPage` answers across all four pages to match (one plugin, no manual credentials).
+- Antigravity & Cursor pages: added notes that Elementor abilities only appear after the Elementor plugin is active, that generated pages use free Elementor widgets with Unsplash placeholder images, and refined the model guidance to Gemini 3.1 Pro (High), noting Flash models produce weaker output.
+- Bumped `lastmod` dates for the four tutorial pages in `sitemap.xml`.
+- Documented the single-plugin / no-application-password conventions and listed the tutorial pages in `AGENTS.MD`.
+
 ### Added
 - Individual SEO-optimized pages for Claude AI and Codex video tutorials (`/free-connect-claude-ai-wordpress-mcp.html` and `/free-connect-codex-wordpress-mcp.html`).
 - Video Schema and Aggregate Rating Schema to the new pages for better search visibility.

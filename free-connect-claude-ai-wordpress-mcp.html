@@ -324,7 +324,7 @@
       "name": "Is connecting Claude AI to WordPress free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The WSP WordPress MCP plugin and MCP Adapter are both 100% free and open source. Claude AI's desktop app is free to download. Claude's subscription starts at $20/month for full usage."
+        "text": "The WSP MCP – AI Agents Connector plugin (with the MCP Adapter bundled in) is 100% free and open source. Claude AI's desktop app is free to download. Claude's subscription starts at $20/month for full usage."
       }
     },
     {
@@ -332,7 +332,7 @@
       "name": "Do I need coding skills to connect Claude AI with WordPress?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No coding skills are required. Install two plugins, copy a config file, and generate an application password — the whole setup takes about 5–10 minutes."
+        "text": "No coding skills are required. Install one plugin and copy a ready-made config file into Claude — the whole setup takes about 5 minutes, with no credentials to set up by hand."
       }
     },
     {
@@ -348,7 +348,7 @@
       "name": "Is it safe to give Claude AI access to my WordPress site?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, with proper precautions. The WSP WordPress MCP plugin gives you granular ability controls — restrict Claude to read-only or enable only specific post types. Keep your application password private."
+        "text": "Yes, with proper precautions. The WSP WordPress MCP plugin gives you granular ability controls — restrict Claude to read-only or enable only specific post types. Keep your connection config private."
       }
     },
     {
@@ -380,7 +380,7 @@
       "name": "What happens if Claude AI has red status in Developer settings?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A red status means the connection failed. Common causes: a typo in the application password, the wrong WordPress URL, or a plugin not activated. Fix these and restart Claude."
+        "text": "A red status means the connection failed. Common causes: the config wasn't pasted correctly, the wrong WordPress URL, or the plugin not activated. Fix these and restart Claude."
       }
     }
   ]
@@ -467,54 +467,40 @@
         <div class="step">
           <div class="step-num">01</div>
           <div class="step-body">
-            <h3>Download the MCP Adapter Plugin</h3>
-            <p>The MCP Adapter is the bridge between your WordPress REST API and Claude's MCP protocol. Go to the MCP Adapter GitHub repository, click <strong>Releases</strong>, and download the latest <code>.zip</code> file.</p>
+            <h3>Download the WSP MCP Plugin</h3>
+            <p>You now only need a <strong>single plugin</strong>. Go to the <a href="https://github.com/bilalnaseer/wsp-wordpress-mcp">WSP WordPress MCP GitHub repository</a>, click <strong>Releases</strong>, and download <code>wsp-mcp-ai-agents-connector.zip</code> from the latest release (v2.3.0 at recording). The MCP Adapter is bundled inside, so there's no separate adapter plugin to install anymore. It's free and MIT licensed — no account required.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">02</div>
           <div class="step-body">
-            <h3>Download the WSP WordPress MCP Plugin</h3>
-            <p>This free open-source plugin by WebSensePro exposes granular WordPress abilities to Claude AI. Download the latest release from the <a href="https://github.com/bilalnaseer/wsp-wordpress-mcp">WSP WordPress MCP GitHub repository</a>. No account required — it's MIT licensed.</p>
+            <h3>Install and Activate the Plugin in WordPress</h3>
+            <p>In your WordPress dashboard, go to <strong>Plugins → Add Plugin → Upload Plugin</strong>. Upload the ZIP and click <strong>Activate Plugin</strong>. After activation, you'll see a new "MCP" menu item appear in your sidebar.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">03</div>
-          <div class="step-body">
-            <h3>Install and Activate Both Plugins in WordPress</h3>
-            <p>In your WordPress dashboard, go to <strong>Plugins → Add Plugin → Upload Plugin</strong>. Upload and activate the MCP Adapter first, then the WSP WordPress MCP plugin. After activation, you'll see a new "MCP" menu item appear in your sidebar.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">04</div>
           <div class="step-body">
             <h3>Configure Which Abilities Claude AI Can Use</h3>
             <p>Click <strong>MCP → Settings</strong>. Toggle on the specific abilities you want Claude to have: create posts, read posts, delete posts, manage pages, WooCommerce products, comments, media, users, and more. Toggle off anything you don't want Claude to touch — you stay in complete control.</p>
           </div>
         </div>
         <div class="step">
-          <div class="step-num">05</div>
+          <div class="step-num">04</div>
           <div class="step-body">
             <h3>Copy the Claude AI Config File</h3>
-            <p>Go to <strong>MCP → Config Files</strong> and click "Copy to Clipboard" under the Claude AI section. This JSON snippet tells Claude your WordPress URL and which ability endpoints to use — it's what connects the two systems together.</p>
+            <p>Go to <strong>MCP → Config Files</strong> and click "Copy to Clipboard" under the Claude AI section. This JSON snippet already includes your WordPress URL, ability endpoints, and connection credentials — it's what connects the two systems together, with nothing to replace by hand.</p>
           </div>
         </div>
         <div class="step">
-          <div class="step-num">06</div>
-          <div class="step-body">
-            <h3>Generate a WordPress Application Password</h3>
-            <p>Go to <strong>Users → All Users → Edit</strong> your admin user. Scroll to <strong>Application Passwords</strong>, create a new one (name it "Claude"), copy it, and replace the <code>replace with your application password</code> placeholder in the config file. Keep this password private — it grants full API-level access to your site.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">07</div>
+          <div class="step-num">05</div>
           <div class="step-body">
             <h3>Paste the Config into Claude and Restart</h3>
             <p>Open Claude → <strong>Settings → Developer → Edit Config</strong>. Paste the config JSON, save the file, then fully quit and reopen Claude. Return to <strong>Settings → Developer</strong> — you should see the WordPress MCP server listed and active. A red error means something in the config needs rechecking.</p>
           </div>
         </div>
         <div class="step">
-          <div class="step-num">08</div>
+          <div class="step-num">06</div>
           <div class="step-body">
             <h3>Test It — Ask Claude to Create a Blog Post</h3>
             <p>Open a new Claude chat and type: <em>"Please create a new SEO-friendly blog post in my WordPress website about [your topic]."</em> Claude will request permission on first use — click <strong>Always Allow</strong>. Within seconds you'll have a fully structured, heading-tagged, SEO-ready blog post live in your WordPress dashboard.</p>
@@ -528,11 +514,11 @@
       <div class="faq-list">
         <div class="faq-item">
           <h3>Is connecting Claude AI to WordPress free?</h3>
-          <p>The WSP WordPress MCP plugin and the MCP Adapter are both 100% free and open source. Claude AI's desktop app is free to download. Claude's AI subscription starts at $20/month for full usage — the free tier has usage limits.</p>
+          <p>The WSP MCP – AI Agents Connector plugin (which bundles the MCP Adapter) is 100% free and open source. Claude AI's desktop app is free to download. Claude's AI subscription starts at $20/month for full usage — the free tier has usage limits.</p>
         </div>
         <div class="faq-item">
           <h3>Do I need coding skills to connect Claude AI with WordPress?</h3>
-          <p>No coding knowledge is required. This is a beginner-friendly setup that involves installing two plugins, copying a config file, and generating an application password — it takes about 5–10 minutes from start to finish.</p>
+          <p>No coding knowledge is required. This is a beginner-friendly setup that involves installing one plugin and copying a ready-made config file into Claude — it takes about 5 minutes from start to finish, with no credentials to set up by hand.</p>
         </div>
         <div class="faq-item">
           <h3>What can Claude AI do with my WordPress website?</h3>
@@ -540,7 +526,7 @@
         </div>
         <div class="faq-item">
           <h3>Is it safe to give Claude AI access to my WordPress site?</h3>
-          <p>Yes, with proper precautions. The WSP WordPress MCP plugin gives you granular ability controls — you can restrict Claude to read-only or enable only specific post types. Always keep your application password private and revoke it if you suspect it has been compromised.</p>
+          <p>Yes, with proper precautions. The WSP WordPress MCP plugin gives you granular ability controls — you can restrict Claude to read-only or enable only specific post types. Keep your connection config private, and disable abilities you don't need.</p>
         </div>
         <div class="faq-item">
           <h3>What is MCP (Model Context Protocol)?</h3>
@@ -556,7 +542,7 @@
         </div>
         <div class="faq-item">
           <h3>What happens if Claude AI has red status in Developer settings?</h3>
-          <p>A red status means the connection failed. The most common causes are: a typo in the application password, the wrong WordPress site URL, or one of the plugins not being activated. Re-check these three things and restart Claude.</p>
+          <p>A red status means the connection failed. The most common causes are: the config wasn't pasted correctly, the wrong WordPress site URL, or the plugin not being activated. Re-check these and restart Claude.</p>
         </div>
       </div>
 
