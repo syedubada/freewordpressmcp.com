@@ -560,7 +560,7 @@
       "name": "Is connecting Google Antigravity 2.0 to WordPress free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Both the WSP WordPress MCP plugin and the MCP Adapter are 100% free and open-source. Antigravity IDE also offers free usage tiers with Gemini models."
+        "text": "Yes. The WSP MCP – AI Agents Connector plugin (with the MCP Adapter bundled in) is 100% free and open-source. Antigravity IDE also offers free usage tiers with Gemini models."
       }
     },
     {
@@ -576,7 +576,7 @@
       "name": "Do I need coding skills to connect Antigravity with WordPress?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No coding required. You install two plugins, copy the generated JSON config from WordPress into Antigravity's mcp_config.json file, and add your Application Password."
+        "text": "No coding required. You install one plugin, then copy the generated JSON config from WordPress and paste it into Antigravity's mcp_config.json file. The snippet already includes your connection credentials."
       }
     },
     {
@@ -584,7 +584,7 @@
       "name": "Which AI models in Antigravity work best with WordPress MCP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Gemini 3.1 Pro (High) or Gemini 3.5 Pro work best for generating structured Elementor layouts and executing multi-step WordPress tasks."
+        "text": "Gemini 3.1 Pro (High) works best for generating structured Elementor layouts and executing multi-step WordPress tasks. Avoid the Flash models, which produce weaker output."
       }
     }
   ]
@@ -662,6 +662,9 @@
                     <li>Manage pages, media libraries, user roles, and taxonomy tags with natural language prompts</li>
                     <li>Eliminate manual copy-pasting between Antigravity and your WordPress Dashboard</li>
                 </ul>
+                <p class="prose">Generated Elementor pages currently use free Elementor widgets and pull responsive
+                    placeholder images from Unsplash — a solid starting layout you can refine further in the Elementor
+                    editor. Support for Elementor Pro and other paid widgets is on the roadmap for the plugin.</p>
 
                 <hr class="section-divider">
 
@@ -671,18 +674,20 @@
                     <div class="step">
                         <div class="step-num">01</div>
                         <div class="step-body">
-                            <h3>Download Required Plugins</h3>
-                            <p>Download the latest release ZIPs for both <code>mcp-adapter.zip</code> (from WordPress
-                                MCP Adapter GitHub) and <code>wsp-wordpress-mcp.zip</code> (from WebSensePro GitHub
-                                repository).</p>
+                            <h3>Download the WSP MCP Plugin</h3>
+                            <p>You now only need a <strong>single plugin</strong>. On the WSP WordPress MCP GitHub, open
+                                <strong>Releases</strong> and download <code>wsp-mcp-ai-agents-connector.zip</code> from
+                                the latest release (v2.3.0 at recording). The MCP Adapter is bundled inside, so there is
+                                no separate adapter plugin to install anymore. Always grab the newest release — the
+                                version will be higher by the time you watch.</p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-num">02</div>
                         <div class="step-body">
-                            <h3>Install & Activate Plugins in WordPress</h3>
-                            <p>In WP Admin, navigate to <strong>Plugins → Add New → Upload Plugin</strong>. Upload and
-                                activate both ZIP files. You will see a new "MCP" menu in your sidebar.</p>
+                            <h3>Install & Activate the Plugin in WordPress</h3>
+                            <p>In WP Admin, go to <strong>Plugins → Add New → Upload Plugin</strong>. Upload the ZIP and
+                                click <strong>Activate Plugin</strong>. A new "MCP" menu appears in your sidebar.</p>
                         </div>
                     </div>
                     <div class="step">
@@ -690,8 +695,9 @@
                         <div class="step-body">
                             <h3>Enable Abilities & Elementor Permissions</h3>
                             <p>Go to <strong>MCP → Settings</strong>. Turn on the abilities you want Antigravity to
-                                perform (Posts, Pages, Media, Comments, and Elementor abilities). Click <strong>Save
-                                    Settings</strong>.</p>
+                                perform — read/create/update Posts and Pages, Media, Comments, Users, Taxonomy, and Site.
+                                Note: <strong>Elementor abilities only appear after the Elementor plugin is installed and
+                                    active</strong>. Click <strong>Save Settings</strong>.</p>
                         </div>
                     </div>
                     <div class="step">
@@ -705,39 +711,29 @@
                     <div class="step">
                         <div class="step-num">05</div>
                         <div class="step-body">
-                            <h3>Generate WordPress Application Password</h3>
-                            <p>Go to <strong>Users → All Users → Edit</strong> your Admin profile. Scroll to
-                                <strong>Application Passwords</strong>, enter a name (e.g. <code>Antigravity</code>),
-                                click <strong>Add New Application Password</strong>, and copy the generated password
-                                string.</p>
+                            <h3>Open MCP Configuration in Antigravity IDE</h3>
+                            <p>Open <strong>Antigravity Agent</strong> and click <strong>Open IDE</strong>. In the IDE,
+                                click the sidebar icon to reveal the Agent panel, then click the three dots (...)
+                                → <strong>MCP Servers</strong> → <strong>Manage MCP Servers</strong> →
+                                <strong>View raw config</strong> (opens <code>mcp_config.json</code>).</p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-num">06</div>
                         <div class="step-body">
-                            <h3>Open MCP Configuration in Antigravity IDE</h3>
-                            <p>Launch Antigravity IDE, click the sidebar toggle to open the Agent Panel, click the 3
-                                dots (...) $\rightarrow$ <strong>MCP Servers</strong> $\rightarrow$ <strong>Manage MCP
-                                    Servers</strong> $\rightarrow$ <strong>View raw config</strong> (opens
-                                <code>mcp_config.json</code>).</p>
+                            <h3>Paste Config & Save the File</h3>
+                            <p>Paste the copied JSON into <code>mcp_config.json</code> and save the file. The snippet
+                                already includes your site's connection credentials, so there's nothing to replace.</p>
                         </div>
                     </div>
                     <div class="step">
                         <div class="step-num">07</div>
                         <div class="step-body">
-                            <h3>Paste Config & Save Password</h3>
-                            <p>Paste the copied JSON configuration into <code>mcp_config.json</code>. Replace
-                                <code>replace-with-your-application-password</code> with your generated Application
-                                Password, then save the file.</p>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="step-num">08</div>
-                        <div class="step-body">
                             <h3>Verify Connection and Run Your First Prompt</h3>
-                            <p>In Antigravity IDE, click <strong>Refresh</strong> under Manage MCP Servers. You should
-                                see <code>wsp-wordpress-mcp</code> listed as enabled! Open Antigravity Agent, choose a
-                                Gemini Pro model, and prompt: <em>"Please create an Elementor page for a website design
+                            <p>Back in <strong>Manage MCP Servers</strong>, click <strong>Refresh</strong>. You should
+                                see the WordPress MCP server listed as connected. Open Antigravity Agent, select
+                                <strong>Gemini 3.1 Pro (High)</strong> — avoid the Flash models, which give weaker
+                                output — and prompt: <em>"Please create an Elementor page for our website design
                                     agency."</em></p>
                         </div>
                     </div>
@@ -749,8 +745,8 @@
                 <div class="faq-list">
                     <div class="faq-item">
                         <h3>Is connecting Google Antigravity 2.0 to WordPress free?</h3>
-                        <p>Yes! Both the WSP WordPress MCP plugin and the MCP Adapter are 100% free and open-source
-                            under the MIT license. Antigravity IDE also offers free model tiers.</p>
+                        <p>Yes! The WSP MCP – AI Agents Connector plugin (which bundles the MCP Adapter) is 100% free and
+                            open-source under the MIT license. Antigravity IDE also offers free model tiers.</p>
                     </div>
                     <div class="faq-item">
                         <h3>Can Antigravity create Elementor layouts directly on my site?</h3>
@@ -759,13 +755,14 @@
                     </div>
                     <div class="faq-item">
                         <h3>Do I need coding skills to connect Antigravity with WordPress?</h3>
-                        <p>No coding required. The entire process involves installing two plugins, copying a JSON
-                            configuration file, and adding a WordPress Application Password.</p>
+                        <p>No coding required. The entire process involves installing one plugin, then copying a
+                            ready-made JSON configuration snippet into Antigravity — no manual credentials to set up.</p>
                     </div>
                     <div class="faq-item">
                         <h3>Which AI models in Antigravity work best with WordPress MCP?</h3>
-                        <p>We recommend selecting <code>Gemini 3.1 Pro (High)</code> or <code>Gemini 3.5 Pro</code> in
-                            Antigravity for better multi-step reasoning and precise Elementor layout generation.</p>
+                        <p>We recommend <code>Gemini 3.1 Pro (High)</code> for the best multi-step reasoning and precise
+                            Elementor layout generation. Avoid the Flash models — in testing they produced noticeably
+                            weaker layouts.</p>
                     </div>
                 </div>
 

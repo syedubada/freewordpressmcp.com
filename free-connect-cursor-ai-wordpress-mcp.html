@@ -281,7 +281,7 @@
       "name": "Is connecting Cursor AI to WordPress free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Both the WSP WordPress MCP plugin and the MCP Adapter are 100% free and open-source. Cursor AI offers a free plan with built-in MCP support."
+        "text": "Yes. The WSP MCP – AI Agents Connector plugin (with the MCP Adapter bundled in) is 100% free and open-source. Cursor AI offers a free plan with built-in MCP support."
       }
     },
     {
@@ -297,7 +297,7 @@
       "name": "Do I need coding skills to connect Cursor AI with WordPress?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No coding skills are required. You install two plugins, copy the generated JSON config from WordPress into Cursor's mcp.json settings, and add an Application Password."
+        "text": "No coding skills are required. You install one plugin, then copy the generated JSON config from WordPress and paste it into Cursor's mcp.json settings. The snippet already includes your connection credentials."
       }
     },
     {
@@ -379,6 +379,7 @@
         <li>Manage pages, taxonomies, categories, tags, and media library assets</li>
         <li>Eliminate manual copy-pasting between Cursor AI and your WordPress dashboard</li>
       </ul>
+      <p class="prose">Generated Elementor pages currently use free Elementor widgets and pull responsive placeholder images from Unsplash — a solid starting layout you can refine further in the Elementor editor. Support for Elementor Pro and other paid widgets is on the roadmap for the plugin.</p>
 
       <hr class="section-divider">
 
@@ -388,22 +389,22 @@
         <div class="step">
           <div class="step-num">01</div>
           <div class="step-body">
-            <h3>Download Required Plugins</h3>
-            <p>Download the latest release ZIP files for <code>mcp-adapter.zip</code> (from WordPress MCP Adapter GitHub) and <code>wsp-wordpress-mcp.zip</code> (from WebSensePro GitHub repository).</p>
+            <h3>Download the WSP MCP Plugin</h3>
+            <p>You now only need a <strong>single plugin</strong>. On the WSP WordPress MCP GitHub, open <strong>Releases</strong> and download <code>wsp-mcp-ai-agents-connector.zip</code> from the latest release (v2.3.0 at recording). The MCP Adapter is bundled inside, so there's no separate adapter plugin to install anymore. Always grab the newest release.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">02</div>
           <div class="step-body">
-            <h3>Install & Activate Plugins in WordPress</h3>
-            <p>In WP Admin, navigate to <strong>Plugins → Add New → Upload Plugin</strong>. Upload and activate both ZIP files. You will see a new "MCP" menu in your sidebar.</p>
+            <h3>Install & Activate the Plugin in WordPress</h3>
+            <p>In WP Admin, go to <strong>Plugins → Add New → Upload Plugin</strong>. Upload the ZIP and click <strong>Activate Plugin</strong>. A new "MCP" menu appears in your sidebar.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">03</div>
           <div class="step-body">
             <h3>Configure Abilities & Elementor Permissions</h3>
-            <p>Go to <strong>MCP → Settings</strong>. Toggle on the abilities you want Cursor AI to perform (Posts, Pages, Taxonomy, Comments, Media, Users, Search, and Elementor abilities). Click <strong>Save Settings</strong>.</p>
+            <p>Go to <strong>MCP → Settings</strong>. Toggle on the abilities you want Cursor AI to perform (Posts, Pages, Taxonomy, Comments, Media, Users, Search). Note: <strong>Elementor abilities only appear after the Elementor plugin is installed and active</strong>. Click <strong>Save Settings</strong>.</p>
           </div>
         </div>
         <div class="step">
@@ -416,29 +417,22 @@
         <div class="step">
           <div class="step-num">05</div>
           <div class="step-body">
-            <h3>Generate WordPress Application Password</h3>
-            <p>Go to <strong>Users → All Users → Edit</strong> your Admin profile. Scroll to <strong>Application Passwords</strong>, enter a name (e.g. <code>CursorAI</code>), click <strong>Add New Application Password</strong>, and copy the generated password string.</p>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">06</div>
-          <div class="step-body">
             <h3>Open MCP Settings in Cursor AI</h3>
             <p>Launch Cursor AI, click the gear icon in the bottom left to open <strong>Settings</strong>, navigate to <strong>Tools & MCP</strong>, and click <strong>Add Custom MCP</strong> (or edit <code>mcp.json</code>).</p>
           </div>
         </div>
         <div class="step">
-          <div class="step-num">07</div>
+          <div class="step-num">06</div>
           <div class="step-body">
-            <h3>Paste Config & Save Password</h3>
-            <p>Paste the copied JSON configuration into <code>mcp.json</code>. Replace <code>replace-with-your-application-password</code> with your generated Application Password, then save the file.</p>
+            <h3>Paste Config & Save the File</h3>
+            <p>Paste the copied JSON into <code>mcp.json</code> and save the file. The snippet already includes your site's connection credentials, so there's nothing to replace.</p>
           </div>
         </div>
         <div class="step">
-          <div class="step-num">08</div>
+          <div class="step-num">07</div>
           <div class="step-body">
             <h3>Verify Connection & Run Prompts</h3>
-            <p>Verify that <code>wsp-wordpress-mcp</code> shows as enabled under Cursor's MCP tools. Open a New Agent chat in Cursor and prompt: <em>"Please create a new blog post related to how to rank my website in Google."</em></p>
+            <p>Verify that the WordPress MCP server shows as enabled under Cursor's MCP tools. Open a New Agent chat in Cursor and prompt: <em>"Please create a new blog post related to how to rank my website in Google."</em></p>
           </div>
         </div>
       </div>
@@ -449,7 +443,7 @@
       <div class="faq-list">
         <div class="faq-item">
           <h3>Is connecting Cursor AI to WordPress free?</h3>
-          <p>Yes. Both the WSP WordPress MCP plugin and the MCP Adapter are 100% free and open-source under the MIT license. Cursor AI offers a free plan with built-in MCP support.</p>
+          <p>Yes. The WSP MCP – AI Agents Connector plugin (which bundles the MCP Adapter) is 100% free and open-source under the MIT license. Cursor AI offers a free plan with built-in MCP support.</p>
         </div>
         <div class="faq-item">
           <h3>Can Cursor AI create Elementor layouts directly inside WordPress?</h3>
@@ -457,7 +451,7 @@
         </div>
         <div class="faq-item">
           <h3>Do I need coding skills to connect Cursor AI with WordPress?</h3>
-          <p>No coding skills are required. You install two plugins, copy the generated JSON config from WordPress into Cursor's mcp.json settings, and add an Application Password.</p>
+          <p>No coding skills are required. You install one plugin, then copy a ready-made JSON config from WordPress into Cursor's mcp.json settings — no manual credentials to set up.</p>
         </div>
         <div class="faq-item">
           <h3>What can Cursor AI do on my WordPress website?</h3>
