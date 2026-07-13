@@ -546,13 +546,13 @@
         drop-shadow(0 0 6px rgba(255, 26, 26, 0.6));
     }
 
-    /* 42 letters, ~0.16s each → ~6.7s for the light to sweep the whole headline */
+    /* 42 letters, 2.85s apart → ~120s sweep, then ~10s pause (130s total loop) */
     .hero-svg .trace-text .ltr {
       stroke-dasharray: 40 8400;
       stroke-dashoffset: 0;
       opacity: 0;
-      animation: traceLetter 120s linear infinite;
-      animation-delay: calc(var(--i) * 1s);
+      animation: traceLetter 130s linear infinite;
+      animation-delay: calc(var(--i) * 1.5s);
     }
 
     @keyframes traceLetter {
