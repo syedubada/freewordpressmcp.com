@@ -1,0 +1,22 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Free WordPress MCP">
+  <!-- Rounded square container (site theme background) -->
+  <rect x="16" y="16" width="480" height="480" rx="112" ry="112" fill="#0B1220"/>
+
+  <!-- MCP connection lines (diamond ring) -->
+  <g fill="none" stroke="#F5A524" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 92 L420 256 L256 420 L92 256 Z"/>
+  </g>
+
+  <!-- MCP nodes -->
+  <g>
+    <circle cx="256" cy="92"  r="26" fill="#F5A524"/>
+    <circle cx="420" cy="256" r="26" fill="#F5A524"/>
+    <circle cx="256" cy="420" r="26" fill="#F5A524"/>
+    <circle cx="92"  cy="256" r="26" fill="#F5A524"/>
+  </g>
+
+  <!-- WordPress-style W -->
+  <path d="M164 178 L202 340 L256 236 L310 340 L348 178"
+        fill="none" stroke="#FFFFFF" stroke-width="34"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

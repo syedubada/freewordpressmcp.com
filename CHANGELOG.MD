@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- Brand icon `assets/free-wordpress-mcp-icon-dark.svg` now used as the **favicon** and the **nav logo** (shown before the "Free WordPress MCP" wordmark) across all pages, replacing the inline data-URI "W" favicon.
 - **Abilities Directory** page (`abilities-directory.html`, served at `/abilities-directory`): a searchable, category-filterable directory of all **73** plugin abilities (MCP tools), with read/write badges, "on by default" markers, and "requires <plugin>" tags for the Yoast SEO, WooCommerce, Elementor, and Advanced Custom Fields groups. Rendered client-side from a vanilla-JS `ABILITIES` array — no framework, self-contained.
 - `abilities.md` — source-of-truth list of every plugin ability, mirroring the plugin registry (`includes/registry.php`) in the wsp-wordpress-mcp repo.
 - "Abilities" navigation link added to the main nav on `index.html`, `tutorials.html`, and all four tutorial pages.
