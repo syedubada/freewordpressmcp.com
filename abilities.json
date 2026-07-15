@@ -1,9 +1,9 @@
 {
     "totals": {
-        "total": 70,
+        "total": 79,
         "core": 26,
-        "read": 31,
-        "write": 39
+        "read": 36,
+        "write": 43
     },
     "abilities": [
         {
@@ -392,6 +392,87 @@
             "access": "write",
             "default": "off",
             "requires": "WooCommerce"
+        },
+        {
+            "id": "wsp/elementor-list-pages",
+            "name": "List Elementor Pages",
+            "description": "List pages/posts built with Elementor (title, ID, URL, status).",
+            "group": "Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Elementor"
+        },
+        {
+            "id": "wsp/elementor-get-page",
+            "name": "Get Page Structure",
+            "description": "Get the element tree of an Elementor page by post ID.",
+            "group": "Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Elementor"
+        },
+        {
+            "id": "wsp/elementor-get-element",
+            "name": "Get Element Settings",
+            "description": "Get all settings for a specific element by post ID and element ID.",
+            "group": "Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Elementor"
+        },
+        {
+            "id": "wsp/elementor-find-element",
+            "name": "Find Element",
+            "description": "Find elements on a page by widget type or settings content search.",
+            "group": "Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Elementor"
+        },
+        {
+            "id": "wsp/elementor-list-templates",
+            "name": "List Templates",
+            "description": "List Elementor saved templates from the library.",
+            "group": "Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Elementor"
+        },
+        {
+            "id": "wsp/elementor-update-element",
+            "name": "Update Element",
+            "description": "Update settings for a widget or container by element ID.",
+            "group": "Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Elementor"
+        },
+        {
+            "id": "wsp/elementor-add-widget",
+            "name": "Add Widget",
+            "description": "Add a widget to a container or column on an Elementor page.",
+            "group": "Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Elementor"
+        },
+        {
+            "id": "wsp/elementor-add-container",
+            "name": "Add Container",
+            "description": "Add a layout container or section to an Elementor page.",
+            "group": "Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Elementor"
+        },
+        {
+            "id": "wsp/elementor-remove-element",
+            "name": "Remove Element",
+            "description": "Remove a widget or container from an Elementor page by element ID.",
+            "group": "Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Elementor"
         },
         {
             "id": "wsp/acf-list-field-groups",
