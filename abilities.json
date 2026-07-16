@@ -1,9 +1,9 @@
 {
     "totals": {
-        "total": 79,
+        "total": 81,
         "core": 26,
-        "read": 36,
-        "write": 43
+        "read": 37,
+        "write": 44
     },
     "abilities": [
         {
@@ -257,6 +257,24 @@
             "access": "write",
             "default": "off",
             "requires": "Yoast SEO"
+        },
+        {
+            "id": "wsp/rankmath-get-seo",
+            "name": "Get Rank Math SEO Meta",
+            "description": "Get Rank Math SEO title, meta description, focus keyword, and SEO score for a post or page.",
+            "group": "Rank Math SEO",
+            "access": "read",
+            "default": "off",
+            "requires": "Rank Math SEO"
+        },
+        {
+            "id": "wsp/rankmath-update-seo",
+            "name": "Update Rank Math SEO Meta",
+            "description": "Update Rank Math SEO title, meta description, and/or focus keyword for a post or page.",
+            "group": "Rank Math SEO",
+            "access": "write",
+            "default": "off",
+            "requires": "Rank Math SEO"
         },
         {
             "id": "wsp/woo-get-products",
