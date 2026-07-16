@@ -20,9 +20,9 @@ The list mirrors the plugin registry at
 
 ## Totals
 
-- **79** total abilities
+- **81** total abilities
 - **26** core (always available)
-- **36** read · **43** write
+- **37** read · **44** write
 
 ---
 
@@ -102,6 +102,15 @@ The list mirrors the plugin registry at
 |---|---|---|---|---|
 | `wsp/yoast-get-seo` | Get Yoast SEO Meta | Get Yoast SEO title, meta description, and focus keyphrase for a post or page. | read | off |
 | `wsp/yoast-update-seo` | Update Yoast SEO Meta | Update Yoast SEO title, meta description, and/or focus keyphrase for a post or page. | write | off |
+
+---
+
+## Rank Math SEO — requires the Rank Math SEO plugin
+
+| Ability ID | Name | Description | Access | Default |
+|---|---|---|---|---|
+| `wsp/rankmath-get-seo` | Get Rank Math SEO Meta | Get Rank Math SEO title, meta description, focus keyword, and SEO score for a post or page. | read | off |
+| `wsp/rankmath-update-seo` | Update Rank Math SEO Meta | Update Rank Math SEO title, meta description, and/or focus keyword for a post or page. | write | off |
 
 ---
 

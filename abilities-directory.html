@@ -1024,18 +1024,19 @@
     // ----- Abilities data (mirrors the plugin registry) -----
     // group meta: core groups are always registered; plugin groups require the named plugin.
     var GROUPS = {
-      'Posts':                   { core: true },
-      'Pages':                   { core: true },
-      'Taxonomy':                { core: true },
-      'Comments':                { core: true },
-      'Media':                   { core: true },
-      'Users':                   { core: true },
-      'Search':                  { core: true },
-      'Site':                    { core: true },
-      'Yoast SEO':               { core: false, requires: 'Yoast SEO' },
-      'WooCommerce':             { core: false, requires: 'WooCommerce' },
-      'Elementor':               { core: false, requires: 'Elementor' },
-      'Advanced Custom Fields':  { core: false, requires: 'ACF' }
+      'Posts': { core: true },
+      'Pages': { core: true },
+      'Taxonomy': { core: true },
+      'Comments': { core: true },
+      'Media': { core: true },
+      'Users': { core: true },
+      'Search': { core: true },
+      'Site': { core: true },
+      'Yoast SEO': { core: false, requires: 'Yoast SEO' },
+      'Rank Math SEO': { core: false, requires: 'Rank Math SEO' },
+      'WooCommerce': { core: false, requires: 'WooCommerce' },
+      'Elementor': { core: false, requires: 'Elementor' },
+      'Advanced Custom Fields': { core: false, requires: 'Advanced Custom Fields' }
     };
 
     var ABILITIES = [
@@ -1067,6 +1068,8 @@
       { id: 'wsp/get-plugins', name: 'Read Plugins', desc: 'List all active plugins with name, version, and author.', group: 'Site', access: 'read', def: false },
       { id: 'wsp/yoast-get-seo', name: 'Get Yoast SEO Meta', desc: 'Get Yoast SEO title, meta description, and focus keyphrase for a post or page.', group: 'Yoast SEO', access: 'read', def: false },
       { id: 'wsp/yoast-update-seo', name: 'Update Yoast SEO Meta', desc: 'Update Yoast SEO title, meta description, and/or focus keyphrase for a post or page.', group: 'Yoast SEO', access: 'write', def: false },
+      { id: 'wsp/rankmath-get-seo', name: 'Get Rank Math SEO Meta', desc: 'Get Rank Math SEO title, meta description, focus keyword, and SEO score for a post or page.', group: 'Rank Math SEO', access: 'read', def: false },
+      { id: 'wsp/rankmath-update-seo', name: 'Update Rank Math SEO Meta', desc: 'Update Rank Math SEO title, meta description, and/or focus keyword for a post or page.', group: 'Rank Math SEO', access: 'write', def: false },
       { id: 'wsp/woo-get-products', name: 'List WooCommerce Products', desc: 'List store products with filtering and pagination.', group: 'WooCommerce', access: 'read', def: false },
       { id: 'wsp/woo-get-product', name: 'Get Single Product', desc: 'Get single product details by ID.', group: 'WooCommerce', access: 'read', def: false },
       { id: 'wsp/woo-create-product', name: 'Create WooCommerce Product', desc: 'Create a new simple or variable product in the store with auto-attributes.', group: 'WooCommerce', access: 'write', def: false },
