@@ -20,9 +20,9 @@ The list mirrors the plugin registry at
 
 ## Totals
 
-- **81** total abilities
+- **126** total abilities
 - **26** core (always available)
-- **37** read · **44** write
+- **54** read · **72** write
 
 ---
 
@@ -149,6 +149,58 @@ The list mirrors the plugin registry at
 | `wsp/elementor-add-widget` | Add Widget | Add a widget to a container or column on an Elementor page. | write | off |
 | `wsp/elementor-add-container` | Add Container | Add a layout container or section to an Elementor page. | write | off |
 | `wsp/elementor-remove-element` | Remove Element | Remove a widget or container from an Elementor page by element ID. | write | off |
+
+---
+
+## Ultimate Addons Elementor — requires the Ultimate Addons for Elementor plugin
+
+| Ability ID | Name | Description | Access | Default |
+|---|---|---|---|---|
+| `wsp/uae-widgets-activate` | Activate Widget | Enables a specific UAE widget. | write | off |
+| `wsp/uae-builder-add-column` | Add Column to Section | Adds a new column to Elementor post. | write | off |
+| `wsp/uae-builder-add-section` | Add Section/Container | Adds a structural layout element. | write | off |
+| `wsp/uae-builder-build` | Build Complete Layout | Builds layout from JSON. | write | off |
+| `wsp/uae-widgets-bulk-toggle` | Bulk Toggle All Widgets | Activates/deactivates every widget. | write | off |
+| `wsp/uae-maintenance-clear-cache` | Clear Elementor Cache | Clears CSS cache globally. | write | off |
+| `wsp/uae-pages-create` | Create Page | Creates an Elementor page. | write | off |
+| `wsp/uae-templates-create` | Create Template | Creates UAE template. | write | off |
+| `wsp/uae-widgets-deactivate-unused` | Deactivate Unused Widgets | Scans and disables unused widgets. | write | off |
+| `wsp/uae-widgets-deactivate` | Deactivate Widget | Disables specific UAE widget. | write | off |
+| `wsp/uae-pages-delete` | Delete Page | Trashes an Elementor page. | write | off |
+| `wsp/uae-templates-delete` | Delete Template | Trashes a UAE template. | write | off |
+| `wsp/uae-templates-duplicate` | Duplicate Template | Duplicates a template. | write | off |
+| `wsp/uae-active-get` | Get All Active Templates | Returns active templates. | read | off |
+| `wsp/uae-display-rules-get-locations` | Get Available Locations | Lists display rule locations. | read | off |
+| `wsp/uae-design-system-get-tokens` | Get Design Tokens | Returns global colors/fonts. | read | off |
+| `wsp/uae-builder-get-schema` | Get Element Schema | Returns widget setting schema. | read | off |
+| `wsp/uae-info-get` | Get Plugin Info | Returns UAE info. | read | off |
+| `wsp/uae-settings-get` | Get Plugin Settings | Gets plugin level settings. | read | off |
+| `wsp/uae-builder-get-structure` | Get Post Structure | Returns Elementor tree. | read | off |
+| `wsp/uae-templates-get` | Get Template Details | Returns full details of template. | read | off |
+| `wsp/uae-theme-get-info` | Get Theme Info | Returns theme compatibility. | read | off |
+| `wsp/uae-widgets-get-usage` | Get Widget Usage Map | Returns site-wide usage counts. | read | off |
+| `wsp/uae-builder-insert-widget` | Insert Widget | Inserts new widget. | write | off |
+| `wsp/uae-builder-list-widget-types` | List Available Widget Types | Lists Elementor widgets. | read | off |
+| `wsp/uae-extensions-list` | List Extensions | Lists UAE extensions. | read | off |
+| `wsp/uae-pages-list` | List Pages | Lists Elementor pages. | read | off |
+| `wsp/uae-templates-list` | List Templates | Lists UAE templates. | read | off |
+| `wsp/uae-widgets-list` | List Widgets | Lists UAE widgets. | read | off |
+| `wsp/uae-builder-move-element` | Move Element | Repositions an element. | write | off |
+| `wsp/uae-builder-regenerate-css` | Regenerate CSS | Forces frontend CSS regen. | write | off |
+| `wsp/uae-builder-remove-element` | Remove Element | Removes a widget/container. | write | off |
+| `wsp/uae-shortcode-render` | Render Template Shortcode | Renders shortcode. | read | off |
+| `wsp/uae-pages-restore` | Restore Page | Restores page from trash. | write | off |
+| `wsp/uae-templates-restore` | Restore Template from Trash | Restores template from trash. | write | off |
+| `wsp/uae-theme-set-method` | Set Theme Compatibility Method | Configures fallback method. | write | off |
+| `wsp/uae-extensions-toggle` | Toggle Extension | Enables/disables extension. | write | off |
+| `wsp/uae-pro-features` | UAE Pro Features Info | Gets Pro upgrade info. | read | off |
+| `wsp/uae-builder-undo` | Undo Last Builder Change | Reverts recent change. | write | off |
+| `wsp/uae-display-rules-update` | Update Display Rules | Sets include/exclude locations. | write | off |
+| `wsp/uae-pages-update-meta` | Update Page Meta | Updates page meta. | write | off |
+| `wsp/uae-pages-update-status` | Update Page Status | Publishes/unpublishes page. | write | off |
+| `wsp/uae-settings-update` | Update Plugin Setting | Updates plugin setting. | write | off |
+| `wsp/uae-templates-update` | Update Template | Updates template type/status. | write | off |
+| `wsp/uae-builder-update-widget` | Update Widget Settings | Updates widget keys. | write | off |
 
 ---
 

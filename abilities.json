@@ -1,9 +1,9 @@
 {
     "totals": {
-        "total": 81,
+        "total": 126,
         "core": 26,
-        "read": 37,
-        "write": 44
+        "read": 54,
+        "write": 72
     },
     "abilities": [
         {
@@ -734,6 +734,411 @@
             "access": "write",
             "default": "off",
             "requires": "Advanced Custom Fields"
+        },
+        {
+            "id": "wsp/uae-widgets-activate",
+            "name": "Activate Widget",
+            "description": "Enables a specific UAE widget.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-add-column",
+            "name": "Add Column to Section",
+            "description": "Adds a new column to Elementor post.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-add-section",
+            "name": "Add Section/Container",
+            "description": "Adds a structural layout element.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-build",
+            "name": "Build Complete Layout",
+            "description": "Builds layout from JSON.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-widgets-bulk-toggle",
+            "name": "Bulk Toggle All Widgets",
+            "description": "Activates/deactivates every widget.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-maintenance-clear-cache",
+            "name": "Clear Elementor Cache",
+            "description": "Clears CSS cache globally.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-pages-create",
+            "name": "Create Page",
+            "description": "Creates an Elementor page.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-templates-create",
+            "name": "Create Template",
+            "description": "Creates UAE template.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-widgets-deactivate-unused",
+            "name": "Deactivate Unused Widgets",
+            "description": "Scans and disables unused widgets.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-widgets-deactivate",
+            "name": "Deactivate Widget",
+            "description": "Disables specific UAE widget.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-pages-delete",
+            "name": "Delete Page",
+            "description": "Trashes an Elementor page.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-templates-delete",
+            "name": "Delete Template",
+            "description": "Trashes a UAE template.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-templates-duplicate",
+            "name": "Duplicate Template",
+            "description": "Duplicates a template.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-active-get",
+            "name": "Get All Active Templates",
+            "description": "Returns active templates.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-display-rules-get-locations",
+            "name": "Get Available Locations",
+            "description": "Lists display rule locations.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-design-system-get-tokens",
+            "name": "Get Design Tokens",
+            "description": "Returns global colors/fonts.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-get-schema",
+            "name": "Get Element Schema",
+            "description": "Returns widget setting schema.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-info-get",
+            "name": "Get Plugin Info",
+            "description": "Returns UAE info.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-settings-get",
+            "name": "Get Plugin Settings",
+            "description": "Gets plugin level settings.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-get-structure",
+            "name": "Get Post Structure",
+            "description": "Returns Elementor tree.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-templates-get",
+            "name": "Get Template Details",
+            "description": "Returns full details of template.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-theme-get-info",
+            "name": "Get Theme Info",
+            "description": "Returns theme compatibility.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-widgets-get-usage",
+            "name": "Get Widget Usage Map",
+            "description": "Returns site-wide usage counts.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-insert-widget",
+            "name": "Insert Widget",
+            "description": "Inserts new widget.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-list-widget-types",
+            "name": "List Available Widget Types",
+            "description": "Lists Elementor widgets.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-extensions-list",
+            "name": "List Extensions",
+            "description": "Lists UAE extensions.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-pages-list",
+            "name": "List Pages",
+            "description": "Lists Elementor pages.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-templates-list",
+            "name": "List Templates",
+            "description": "Lists UAE templates.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-widgets-list",
+            "name": "List Widgets",
+            "description": "Lists UAE widgets.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-move-element",
+            "name": "Move Element",
+            "description": "Repositions an element.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-regenerate-css",
+            "name": "Regenerate CSS",
+            "description": "Forces frontend CSS regen.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-remove-element",
+            "name": "Remove Element",
+            "description": "Removes a widget/container.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-shortcode-render",
+            "name": "Render Template Shortcode",
+            "description": "Renders shortcode.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-pages-restore",
+            "name": "Restore Page",
+            "description": "Restores page from trash.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-templates-restore",
+            "name": "Restore Template from Trash",
+            "description": "Restores template from trash.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-theme-set-method",
+            "name": "Set Theme Compatibility Method",
+            "description": "Configures fallback method.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-extensions-toggle",
+            "name": "Toggle Extension",
+            "description": "Enables/disables extension.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-pro-features",
+            "name": "UAE Pro Features Info",
+            "description": "Gets Pro upgrade info.",
+            "group": "Ultimate Addons Elementor",
+            "access": "read",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-undo",
+            "name": "Undo Last Builder Change",
+            "description": "Reverts recent change.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-display-rules-update",
+            "name": "Update Display Rules",
+            "description": "Sets include/exclude locations.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-pages-update-meta",
+            "name": "Update Page Meta",
+            "description": "Updates page meta.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-pages-update-status",
+            "name": "Update Page Status",
+            "description": "Publishes/unpublishes page.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-settings-update",
+            "name": "Update Plugin Setting",
+            "description": "Updates plugin setting.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-templates-update",
+            "name": "Update Template",
+            "description": "Updates template type/status.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
+        },
+        {
+            "id": "wsp/uae-builder-update-widget",
+            "name": "Update Widget Settings",
+            "description": "Updates widget keys.",
+            "group": "Ultimate Addons Elementor",
+            "access": "write",
+            "default": "off",
+            "requires": "Ultimate Addons Elementor"
         }
     ]
 }
