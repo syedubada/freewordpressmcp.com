@@ -1,1 +1,5 @@
-https://www.freewordpressmcp.com/*  https://freewordpressmcp.com/:splat  301
+# www → non-www canonicalization is handled at the Cloudflare zone level
+# (Rules → Redirect Rules), not here: Cloudflare Pages `_redirects` matches on
+# the URL path only, so a hostname-based source never fires. The 301 for
+# www.freewordpressmcp.com/* → freewordpressmcp.com/:splat lives as a proxied
+# Redirect Rule in the Cloudflare dashboard.

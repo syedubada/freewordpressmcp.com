@@ -6,6 +6,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Fixed
+- **www → non-www SEO redirect.** `www.freewordpressmcp.com` was serving pages with a `200` (duplicate content) instead of redirecting, because the `_redirects` rule used a hostname-based source — which Cloudflare Pages ignores (it matches on path only). Replaced it with a proxied Cloudflare **Redirect Rule** (301, path + query preserved) plus a proxied `www` CNAME so the rule fires. `_redirects` now documents that www canonicalization lives at the zone level. Verified: `https://www/*` → `301` → `https://freewordpressmcp.com/*`.
+
 ### Added
 - Added the missing **Gravity Forms** group (18 abilities) to `abilities.md`, bringing its body in sync with its `145` totals header and with `abilities-directory.html` (which already listed the group). The section documents form, entry, notification, and confirmation tools (6 read · 12 write).
 - Rewrote `README.md` with a full **Tools / Abilities** section documenting all **145** MCP tools the plugin exposes: a summary table (145 total · 60 read · 85 write · 27 core · 7 plugin integrations), a per-group "at a glance" table with read/write splits, and collapsible `<details>` listings of every tool per group (Posts, Pages, Taxonomy, Comments, Media, Users, Search, Site, Yoast SEO, Rank Math SEO, WooCommerce, Elementor, Ultimate Addons for Elementor, Gravity Forms, ACF). Counts derived from `abilities-directory.html`.
